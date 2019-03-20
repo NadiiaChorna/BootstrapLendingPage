@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial=scale=1">	
+	<title>Responsive Bootstrap</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticki-top">
+	<!-- Стандартная панель навигации создается с помощью .navbar класса, за которым следует адаптивный класс свертывания: (стеки навигационной панели .navbar-expand-xl|lg|md|sm по вертикали на очень больших, больших, средних или маленьких экранах).
+	.navbar-light	Добавление черного цвета текста ко всем ссылкам в навигационной области
+	.sticky-top	Делает элемент оставаться липким/фиксированной в верхней части страницы, когда вы прокрутите мимо него
+	.bg-light	Добавление светло-серого цвета фона к элементу -->
+	<div class="container-fluid">
+		<a href="#" class="navbar-brend"><img src="img/logo.png" alt="Logo">
+		<!-- .navbar-brand	Добавляется к ссылке или элементу заголовка внутри навигационной страницы для представления логотипа или заголовка -->
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+			<!-- .navbar-toggler	Стили кнопки, которые должны открыть панели навигации на небольших экранах. Автоматический стиль как гамбургер/три бара-->
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<!-- .navbar-collapse	Сворачивает навигационной панели (скрытые и заменены меню/гамбургер значок на мобильных телефонах и малых таблеток)
+			.collapse	Обозначает складное содержимое, которое может быть скрыто или показано по требованию -->
+
+			<ul class="navbar-nav ml-auto">
+				<!-- .navbar-nav	Контейнер для навигационных ссылок внутри контейнера. навигационной панели
+				ml-auto - margin-left auto -->
+				<li class="nav-item active">
+					<a href="#" class="nav-link">Home</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">About</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">Services</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">Team</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">Connect</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<!--- Image Slider -->
+<div id="slides" class="carousel slide" data-ride="carousel">
+	<!-- .carousel	Создает Карусель (слайд-шоу)
+	.slide	Добавляет CSS переход и эффект анимации при скольжении от одного элемента к следующему. Удалите этот класс, если вы не хотите, чтобы этот эффект -->
+	<ul class="carousel-indicators">
+    	<li data-target="#slides" data-slide-to="0" class="active"></li>
+    	<li data-target="#slides" data-slide-to="1"></li>
+    	<li data-target="#slides" data-slide-to="2"></li>
+  	</ul>
+  	<div class="carousel-inner ">
+    <div class="carousel-item active">
+      <img src="img/background.png" alt="Mountains">
+      <div class="carousel-caption">
+	    <h1 class="display-2">Bootstrap</h1>
+	    <h3>Complete Website Layout</h3>
+	    <button type="button" class="btn btn-outline-light btn-lg">VIEW DEMO</button>
+	    <button type="button" class="btn btn-primary btn-lg">Get Started</button>	    
+	  </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/background2.png" alt="Bootstrap img">
+    </div>
+    <div class="carousel-item">
+      <img src="img/background3.png" alt="Grid">
+    </div>
+  </div>
+</div>
+
+<!--- Jumbotron -->
+<div class="container-fluid">
+	<div class="row jumbotron">
+		<!-- .jumbotron	Создает мягкий серый заголовок/прямоугольник с закругленными углами, что увеличивает размер шрифта текста внутри него. Используется для вызова дополнительного внимания к какому-либо Специальному содержанию или информации -->
+
+		<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+			<p class="lead">Aliqua in in deserunt duis laborum minim et proident cillum culpa sint in consectetur in.
+<!-- 				.lead	Увеличение размера шрифта и высоты строки абзаца -->
+
+			</p>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
+			<button type="button" class="btn btn-outline-secondary btn-lg">Lorem ipsum</button>
+		</div>
+	</div>
+</div>
+
+<!--- Welcome Section -->
+<div class="container-fluid padding">
+	<div class="row welcome text-center">
+<!-- 	text-center -вирівнювання тексту в компоненті
+	padding - додасть падінги між контейнером і row
+	welcome - стилізує секцію build with ease	-->	
+		<div class="col-12">
+			<h1 class="display-4">
+				<!-- display-4 - стиль заголовку -->
+				Built with ease.
+			</h1>
+		</div>
+		<hr>
+		<div class="col-12">
+			<p class="lead">Occaecat laborum commodo enim esse eiusmod consectetur dolor aute duis magna in laboris ut qui commodo proident mollit sunt irure pariatur aliqua quis cupidatat eu est proident nulla sint in deserunt.</p>
+		</div>
+	</div>
+</div>
+
+<!--- Three Column Section -->
+<div class="container-fluid padding">
+	<div class="row text-center padding">
+		<div class="col-xs-12 col-sm-6 col-md-4">
+			<i class="fas fa-code"></i>
+			 <!-- fas fa-code - знвчок ечтіемель -->
+			<h3>HTML5</h3>
+			<p>Laborum sint esse amet.</p>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-4">
+			<i class="fas fa-bold"></i>
+			 <!-- fas fa-code - знвчок ечтіемель -->
+			<h3>BOOTSTRAP</h3>
+			<p>Laborum sint esse amet.</p>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-4">
+			<i class="fab fa-css3"></i>
+			 <!-- fas fa-code - знвчок ечтіемель -->
+			<h3>CSS3</h3>
+			<p>Laborum sint esse amet.</p>
+		</div>
+	</div>
+	<hr class="my-4">
+</div>
+
+<!--- Two Column Section -->
+<div class="container-fluid padding">
+	<div class="row padding">
+		<div class="col-md-6">
+			<h3>Laborum sint esse amet...</h3>
+			<p>Occaecat laborum commodo enim esse eiusmod consectetur dolor aute duis magna in laboris ut qui commodo proident mollit sunt irure pariatur aliqua.</p>
+			<p>Occaecat laborum commodo enim esse eiusmod consectetur dolor aute duis magna in laboris ut qui commodo proident mollit sunt irure pariatur aliqua quis cupidatat eu est proident nulla sint in deserunt.</p>
+			<p>Occaecat laborum commodo enim esse eiusmod consectetur dolor aute duis magna in laboris ut qui commodo proident moll.</p>
+			
+			<button class="btn btn-primary btn-md mt-3">Lorem ipsum</button>
+		</div>
+		<div class="col-md-6">
+			<img src="img/desk.png" alt="Girl" class="img-fluid">
+		</div>
+	</div>
+</div>
+<hr class="my-4">
+<!--- Fixed background -->
+<figure>
+	<div class="fixed-wrap">
+		<div id="fixed"></div>
+	</div>
+</figure>
+
+<!--- Emoji Section -->
+<button class="fun" data-toggle="collapse" data-target="#emoji">click for fun</button>
+<div id="emoji" class="collapse">
+	<div class="container-fluid padding">
+		<div class="row text-center">
+			<div class="col-sm-6 col-md-3">
+				<img src="img/gif/panda.gif" alt="panda" class="gif">
+			</div>
+			<div class="col-sm-6 col-md-3">
+				<img src="img/gif/poo.gif" alt="poo" class="gif">
+			</div>
+			<div class="col-sm-6 col-md-3">
+				<img src="img/gif/unicorn.gif" alt="unicorn" class="gif">
+			</div>
+			<div class="col-sm-6 col-md-3">
+				<img src="img/gif/chicken.gif" alt="chicken" class="gif">
+			</div>
+		</div>
+	</div>
+</div>  
+<!--- Meet the team -->
+<div class="container-fluid padding">
+	<div class="row welcome text-center">
+		<div class="col-12">
+			<h1 class="display-4">Meet the Team</h1>
+		</div>
+		<hr>
+	</div>
+</div>
+
+<!--- Cards -->
+<div class="container-fluid padding">
+	<div class="row padding">
+		<div class="col-md-4">
+			<div class="card">
+				<!-- Создание карточки осуществляется посредством добавления к HTML элементу, например, div класса card.
+				Основные строительные фрагменты карточки:
+
+				card-body (текстовый контент);
+				card-img-top или card-img-bottom (изображение);
+				card-img-overlay (текстовый контент над изображением);
+				card-header (заголовок);
+				card-footer (футер);
+				list-group (список). -->
+				<img src="img/team1.png" class="card-img-top">
+				<div class="card-body">
+					<h1 class="card-title">Lorem ipsum</h1>
+					<p class="card-text">Cupidatat cupidatat ad aliquip officia nisi anim id officia. Mollit ea pariatur irure nulla labore duis cupidatat anim minim non consequat aliqua enim ea excepteur dolore.</p>
+					<button type="button" class="btn btn-outline-secondary btn-lg">See profile</button>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="card">
+				<img src="img/team2.png" class="card-img-top">
+				<div class="card-body">
+					<h1 class="card-title">Lorem ipsum</h1>
+					<p class="card-text">Duis laborum mollit fugiat aute ex tempor occaecat est ut deserunt aliqua sit. Tempor dolor commodo cupidatat minim est aliquip ea sit cillum anim aute et nulla.</p>
+					<button type="button" class="btn btn-outline-secondary btn-lg">See profile</button>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="card">
+				<img src="img/team3.png" class="card-img-top">
+				<div class="card-body">
+					<h1 class="card-title">Lorem ipsum</h1>
+					<p class="card-text">Eiusmod quis qui ullamco adipisicing velit sit commodo est anim id excepteur dolor aliqua fugiat non magna.Qui nulla et excepteur dolor veniam eu irure dolore eu.</p>
+					<button type="button" class="btn btn-outline-secondary btn-lg">See profile</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--- Two Column Section -->
+
+<div class="container-fluid padding">
+	<div class="row padding">
+		<div class="col-lg-6">
+			<h2>Laborum sint esse amet...</h2>
+			<p>Occaecat laborum commodo enim esse eiusmod consectetur dolor aute duis magna in laboris ut qui commodo proident mollit sunt irure pariatur aliqua.</p>
+			<p>Occaecat laborum commodo enim esse eiusmod consectetur dolor aute duis magna in laboris ut qui commodo proident mollit sunt irure pariatur aliqua quis cupidatat eu est proident nulla sint in deserunt.Occaecat laborum commodo enim esse eiusmod consectetur dolor aute duis magna in laboris ut qui commodo proident moll.</p>
+		</div>
+		<div class="col-lg-6">
+			<img src="img/bootstrap2.png" class="img-fluid">
+		</div>
+	</div>
+	<hr class="my-4">
+</div>
+
+
+<!--- Connect -->
+<div class="container-fluid padding">
+	<div class="row text-center padding">
+		<div class="col-12"><h2>Connect</h2></div>
+	<div class="col-12 social padding">
+		<a href="#"><i class="fab fa-facebook"></i></a>
+		<a href="#"><i class="fab fa-twitter"></i></a>
+		<a href="#"><i class="fab fa-google-plus-g"></i></a>
+		<a href="#"><i class="fab fa-instagram"></i></a>
+		<a href="#"><i class="fab fa-youtube"></i></a>
+	</div>
+	</div>
+</div>
+
+<!--- Footer -->
+<footer>
+	<div class="container-fluid padding">
+		<div class="row padding text-center">
+			<div class="col-md-4">
+				<img src="img/w3newbie.png">
+				<hr class="light">
+				<p>555-555-555</p>
+				<p>asfdf@asd.com</p>
+				<p>100 Street Name</p>
+				<p>Sity, State, 10000</p>
+			</div>
+			<div class="col-md-4">
+				<hr class="light">
+				<h5>Our hours</h5>
+				<hr class="light">
+				<p>Monday: 9 am - 5pm </p>
+				<p>Saturday: 9 am - 4pm </p>
+				<p>Sunday: closed </p>
+			</div>
+			<div class="col-md-4">
+				<hr class="light">
+				<h5>Our hours</h5>
+				<hr class="light">
+				<p>Sity, State, 10000</p>
+				<p>Sity, State, 10000</p>
+				<p>Sity, State, 10000</p>
+				<p>Sity, State, 10000</p>
+			</div>
+			<div class="col-md-12 te">
+				<hr class="light-100">
+				<h5>&copy; w3newbie.com</h5>
+			</div>
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>
